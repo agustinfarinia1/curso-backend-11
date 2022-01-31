@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class HerokuController {
     @GetMapping("/ej")
+    public String getPrueba(){
+        return "Prueba heroku";
+    }
+    @GetMapping("/mensajes/ej")
     public Mensajes getHeroku(){
         return new Mensajes("Bienvenido Heroku!");
     }
